@@ -13,4 +13,13 @@ const addUser = async (user) => {
     });
 };
 
-module.exports = { addUser };
+const getUsers = async () => {
+    return new Promise((resolve, reject) => {
+        userModel.getUsers((err, result) => {
+            if (err) return reject(err);
+            resolve(result);
+        });
+    });
+};
+
+module.exports = { addUser, getUsers };

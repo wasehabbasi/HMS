@@ -18,4 +18,13 @@ const addUser = async (req, res) => {
     }
 };
 
-module.exports = { addUser };
+const getUsers = async (req, res) => { // Added req
+    try {
+        const result = await userService.getUsers();
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to fetch users', error: error.message });
+    }
+};
+
+module.exports = { addUser, getUsers };

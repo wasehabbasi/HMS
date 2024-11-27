@@ -8,4 +8,12 @@ const createUser = (user, callback) => {
     });
 };
 
-module.exports = { createUser };
+const getUsers = (callback) =>{
+    const query = 'SELECT * FROM users';
+    db.query(query, (err, result) => {
+        if (err) return callback(err, null);
+        callback(null, result);
+    });
+}
+
+module.exports = { createUser, getUsers };
