@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4"
+  },
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Creating a well-structured Node.js application involves adhering to best practices that ensure scalability, maintainability, and readability. Here's a detailed guide:",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
