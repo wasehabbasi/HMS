@@ -1,7 +1,7 @@
 const db = require('./db');
 
 const createUser = (user, callback) => {
-    const query = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
+    const query = 'INSERT INTO users (name, email, password, phone_number, role, specialization, hospital_id) VALUES (?, ?, ?, ?, ?, ?, ?)';
     db.query(query, [user.name, user.email, user.password], (err, result) => {
         if (err) return callback(err, null);
         callback(null, result);

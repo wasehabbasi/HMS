@@ -21,7 +21,7 @@ const addUser = async (req, res) => {
 const getUsers = async (req, res) => { // Added req
     try {
         const result = await userService.getUsers();
-        res.status(200).json(result);
+        res.status(200).json({ data: result });
     } catch (error) {
         res.status(500).json({ message: 'Failed to fetch users', error: error.message });
     }
